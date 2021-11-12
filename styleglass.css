@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  main{
+    font-family: "Poppins", sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to right top, #510269, #ae08f0);
+      display: flex;
+      align-items: center; /* alinea verticalmente arriba, medio o abajo por decir*/
+      justify-content: center; /*alinea horizontalmente derecha, medio, izquierda*/
+  }
+  .vidrio{
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(    to right bottom, 
+       rgba(255, 255, 255, 0.7),    rgba(255, 255, 255, 0.3)  );
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  z-index: 2; /* indica que estara por encima de los circulos*/
+  backdrop-filter: blur(1rem); /*EFECTO VIDRIO*/
+  display: flex; /*para que los DIV barralateral y juegos entre uno a lado del otro*/
+}
+.circulo1, /*propiedades de los circulos*/
+.circulo2 {
+    background: rgb(248, 248, 250);
+    background: linear-gradient(to right bottom, rgba(37, 5, 155, 1),    rgba(2, 245, 233, 0.5) );
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
+/* posicion de los circulos*/
+.circulo1 {
+    top: 5%;
+    right: 15%;
+  }
+  .circulo2 {
+    bottom: 5%;
+    left: 15%;
+  }
+  .tablalateral 
+  { /* seccion izquierda*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+  }
+  .link {
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+  }
+  .link h2 {
+    padding: 0rem 2rem;
+  }
+  .pro {
+    background: linear-gradient(to right top ,    rgba(2, 245, 233, 0.5), rgba(37, 5, 155, 1));
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+  } 
+  .pro img {
+    position: absolute;
+    top: -20%;
+    right: 10%;
+  }
+  .pro h2 {
+    width: 40%;
+    color: white;
+    font-weight: 600;
+  }
+  
+
+/* seccion derecha*/
+  .juegos { 
+    flex: 2;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  } 
+  /* seccion derecha*/
+
+  .status {
+    margin-bottom: 3rem;
+  }
+  
+  .status input {
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 2rem;
+  }
+  
+  
+  .card {
+    display: flex;
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.5)
+    );
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(19, 0, 0, 0.312);
+    justify-content: space-between;
+  }
+  /*BARRA DE PROGRESO*/
+  .progress {
+    background: linear-gradient(to right top, #f34d23, #f10303);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Hasta donde llega la barra*/
+  .progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 60%;
+  }
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .percentage {
+    font-weight: bold;
+    background: linear-gradient(to right top, #f53404, #f10303);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
